@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="css/colorpicker.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1 id="clickMe">Sample Click Handler</h1>
+    <div id="hello">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio nobis consequatur ad in eius, aspernatur dignissimos natus reiciendis, quisquam suscipit, maxime assumenda! Amet itaque voluptatem, aut omnis temporibus hic placeat eveniet, est quisquam necessitatibus ab ratione iusto quo perspiciatis, aliquam, recusandae minima! Numquam officia a vero quisquam, illo in debitis dolor labore perspiciatis officiis est nemo, tenetur error cumque nam esse consequuntur! Eveniet dolores porro, molestiae! Est provident quae a labore, atque eos deleniti neque qui, nihil iure dignissimos sunt repellendus placeat dolorem doloribus tenetur voluptatum ipsa quia itaque velit, suscipit quisquam ducimus? Enim ipsam obcaecati nihil officia delectus rem. Esse non delectus, fugit obcaecati est accusamus voluptatem facere quibusdam, eius voluptatum! Atque commodi repudiandae molestiae odit temporibus quidem qui possimus iure assumenda odio. Perspiciatis provident necessitatibus, voluptas saepe inventore magni repellat expedita velit culpa. Recusandae culpa doloribus non, aliquam voluptas repellendus! Laborum aliquam repellat laboriosam corporis quis hic perferendis saepe aliquid modi, blanditiis reiciendis excepturi eum aperiam, omnis iusto tempore inventore vero officia temporibus ducimus veritatis voluptatibus illo, nostrum. Qui autem possimus dolore natus vero quasi est omnis maiores consequatur voluptatibus, ullam vitae quis maxime, aut nobis fuga esse molestiae expedita nulla veritatis. Voluptates inventore reiciendis laboriosam odio.</p>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quaerat ab non quibusdam veritatis minima nostrum, officia enim dolorem vitae quam rerum beatae maxime suscipit ea, dolore numquam illo sequi?</p>
+    <main>
+        <canvas id="slate" class="slate" width="640" height="480"></canvas>
+
+        <canvas id="color-palette" class="color-palette hide" width="256" height="256"></canvas>
+    </main>
+    
+    
+  <nav class="toolbar">
+        <ul>
+           <li>
+          		<button id="colorPickerButton" class="colorPickerButton colorpickerHolderShow"></button>
+           		<p id="colorpickerHolder"></p>
+           </li>
+            <li>
+                <label>Outils</label>
+                <button id="tool-clear-canvas" title="Effacer"><i class="fa fa-trash"></i></button>
+                <input type="color" id="tool-color-picker" title="Pipette">
+                <button title="gomme" id="gomme"><i class="fa fa-eraser"></i></button>
+                <button title="ecrire" id="ecrire"><i class="fa fa-pencil"></i></button>
+            </li>
+            <li>
+                <label>Taille de la gommme</label>
+           			<input type="range" name="sizeGomme" id="sizeGomme" min="0" max="50" value="10">
+           			<label id="indicSizeGomme"></label>
+           			<label id="indicDessinSizeGomme"></label>
+            </li>
+							
+            <li>
+                <label>Couleur</label>
+                <div class="pen-color black" data-color="black"></div>
+                <div class="pen-color maroon" data-color="#5C2121"></div>
+                <div class="pen-color red" data-color="#B9121B"></div>
+                <div class="pen-color yellow" data-color="#FFBD07"></div>
+                <div class="pen-color green" data-color="#13B813"></div>
+                <div class="pen-color seagreen" data-color="#029E9A"></div>
+                <div class="pen-color blue" data-color="#0378A6"></div>
+            </li>
+            <li>
+                <label>Epaisseur</label>
+                <button class="pen-size" data-size="1">Fin</button>
+                <button class="pen-size" data-size="5">Normal</button>
+                <button class="pen-size" data-size="10">Epais</button>
+                <input type="number" name="pen-size-entree" id="pen-size-entree">
+            </li>
+        </ul>
+    </nav>
+    
+	<label for="">Prop du crayon dans la console : <input type="button" id="crayon" value="Le Crayon"></label>
+    
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/Start.class.js"></script>
+    <script src="js/Pen.class.js"></script>
+    <script src="js/Ardoise.class.js"></script>
+    <script src="js/colorpicker.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
